@@ -1,0 +1,55 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName='XXXchangemeXXXX'
+
+
+// tag::repositories[]
+repositories{
+    
+    mavenCentral()
+
+}
+//end::repositories[]
+
+
+//tag::jar[]
+jar{
+
+    //baseName='XXXJARNAMEXXX'
+    version='0.1.0'
+
+manifest {
+        //  attributes 'Main-class' : 'animaldemo'
+       }
+
+}
+//end:jar[]
+
+//tag::dependencies[]
+sourceCompatibility=1.8
+targetCompatibility=1.8
+
+dependencies{
+
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+
+}
+
+test {
+    useJUnit {       
+    }
+}
+
+/* task hello {
+	doLast{
+		println "Hello, World!"
+	}
+}*/
+
+//end::dependencies[]
+
+//tag::wrapper[]
+//end::wrapper[]
+
